@@ -1,0 +1,21 @@
+###############################################################################
+# Set default behavior to automatically normalize line endings.
+###############################################################################
+* text=auto
+
+###############################################################################
+# behavior for settings file
+#
+# Windows Terminal likes saving the settings file with LF line endings.
+###############################################################################
+settings.json text eol=lf
+
+###############################################################################
+# behavior for image files
+#
+# image files are treated as binary by default.
+###############################################################################
+*.jpg   binary
+*.png   binary
+*.gif   binary
+*.ico   binary
