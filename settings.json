@@ -73,7 +73,7 @@
             },
             {
                 "commandline": "C:\\Program Files\\Git\\bin\\bash.exe -i -l",
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "guid": "{1dc0c6b5-9b00-4ec1-a7e8-ba244fa3b04d}",
                 "hidden": false,
                 "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "Git Bash",
