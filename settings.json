@@ -67,7 +67,7 @@
                     "face": "Cascadia Code PL"
                 },
                 "guid": "{6c8c5bac-11c2-44aa-8663-4e73efc9446c}",
-                "icon": "C:\\Users\\nathan.povo\\Desktop\\icons\\powershell.ico",
+                "icon": "%localappdata%\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\Icons\\red_powershell.ico",
                 "name": "PowerShell (Administrator)",
                 "useAcrylic": true
             },
@@ -81,14 +81,14 @@
             {
                 "commandline": "powershell.exe -noe -c \"&{$vsPath = &(Join-Path ${env:ProgramFiles(x86)} '\\Microsoft Visual Studio\\Installer\\vswhere.exe') -property installationpath; Import-Module (Join-Path $vsPath 'Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll'); Enter-VsDevShell -VsInstallPath $vsPath -SkipAutomaticLocation}\"",
                 "guid": "{d65b62b3-ce5d-4140-98c1-48a66e996268}",
-                "icon": "%ProgramFiles(x86)%\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-180.png",
+                "icon": "%localappdata%\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\Icons\\VisualStudio.png",
                 "name": "Developer PowerShell for VS 2019",
                 "startingDirectory": "%USERPROFILE%"
             },
             {
                 "commandline": "%comspec%  /k \"%ProgramFiles(x86)%\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\Tools\\VsDevCmd.bat\"",
                 "guid": "{09a078ea-326b-4903-90cc-cf9e6ce83e53}",
-                "icon": "%ProgramFiles(x86)%\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-180.png",
+                "icon": "%localappdata%\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\Icons\\VisualStudio.png",
                 "name": "Developer Command Prompt for VS 2019",
                 "startingDirectory": "%USERPROFILE%"
             },
