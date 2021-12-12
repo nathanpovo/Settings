@@ -59,7 +59,7 @@
             {
                 "backgroundImage": null,
                 "colorScheme": "Color Scheme 10",
-                "commandline": "gsudo C:\\Users\\nathan.povo\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe",
+                "commandline": "gsudo %localappdata%\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe",
                 "cursorShape": "vintage",
                 "experimental.retroTerminalEffect": false,
                 "font": 
