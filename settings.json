@@ -38,6 +38,7 @@
     {
         "defaults": 
         {
+            "cursorShape": "vintage",
             "font": 
             {
                 "face": "Cascadia Code PL"
@@ -46,7 +47,6 @@
         "list": 
         [
             {
-                "cursorShape": "vintage",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
@@ -58,7 +58,6 @@
                 "backgroundImage": null,
                 "colorScheme": "Color Scheme 10",
                 "commandline": "gsudo %localappdata%\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe",
-                "cursorShape": "vintage",
                 "experimental.retroTerminalEffect": false,
                 "guid": "{6c8c5bac-11c2-44aa-8663-4e73efc9446c}",
                 "icon": "%localappdata%\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\Icons\\red_powershell.ico",
