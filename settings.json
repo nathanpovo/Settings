@@ -73,18 +73,18 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-                "commandline": "powershell.exe -noe -c \"&{$vsPath = &(Join-Path ${env:ProgramFiles(x86)} '\\Microsoft Visual Studio\\Installer\\vswhere.exe') -property installationpath; Import-Module (Join-Path $vsPath 'Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll'); Enter-VsDevShell -VsInstallPath $vsPath -SkipAutomaticLocation}\"",
-                "guid": "{d65b62b3-ce5d-4140-98c1-48a66e996268}",
-                "icon": "%localappdata%\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\Icons\\VisualStudio.png",
-                "name": "Developer PowerShell for VS 2019",
-                "startingDirectory": "%USERPROFILE%"
+                "guid": "{41bb361a-36b3-540c-9745-963f442dd17b}",
+                "hidden": false,
+                "icon": "%localappdata%\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\Icons\\visual_studio.ico",
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "commandline": "%comspec%  /k \"%ProgramFiles(x86)%\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\Tools\\VsDevCmd.bat\"",
-                "guid": "{09a078ea-326b-4903-90cc-cf9e6ce83e53}",
-                "icon": "%localappdata%\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\Icons\\VisualStudio.png",
-                "name": "Developer Command Prompt for VS 2019",
-                "startingDirectory": "%USERPROFILE%"
+                "guid": "{08dd6a09-6284-5285-80c9-b30f7adaffcf}",
+                "hidden": false,
+                "icon": "%localappdata%\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\Icons\\visual_studio.ico",
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             },
             {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
