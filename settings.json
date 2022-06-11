@@ -338,5 +338,6 @@
         }
     ],
     "startOnUserLogin": true,
+    "theme": "dark",
     "windowingBehavior": "useAnyExisting"
 }
