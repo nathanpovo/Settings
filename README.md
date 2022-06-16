@@ -33,3 +33,11 @@ New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.Wind
 ```
 
 Guide taken from [here](https://blog.novacare.no/advanced-setup-for-windows-terminal/).
+
+## Icons
+
+See the following links about icons
+
+https://github.com/microsoft/terminal/issues/1918
+https://github.com/TheFern2/windows-terminal-icons
+https://github.com/microsoft/terminal/tree/main/src/cascadia/CascadiaPackage/ProfileIcons
