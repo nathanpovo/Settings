@@ -68,3 +68,13 @@ See the following links about icons
 https://github.com/microsoft/terminal/issues/1918
 https://github.com/TheFern2/windows-terminal-icons
 https://github.com/microsoft/terminal/tree/main/src/cascadia/CascadiaPackage/ProfileIcons
+
+# fnm
+
+Source - https://github.com/Schniz/fnm
+
+### Installation
+
+```powershell
+winget install -i --exact --source winget --id Schniz.fnm
+```
