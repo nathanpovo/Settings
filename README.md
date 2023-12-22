@@ -56,7 +56,7 @@ Remove-Item -Path $Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8
 - Create symlink to synchronized directory:
 
 ``` powershell
-New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Target "C:\Projects\WindowsTerminalSetup"
+New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" -Target "C:\Projects\Settings\Windows-Terminal-Settings\settings.json"
 ```
 
 Guide taken from [here](https://blog.novacare.no/advanced-setup-for-windows-terminal/).
