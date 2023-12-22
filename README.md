@@ -78,3 +78,32 @@ Source - https://github.com/Schniz/fnm
 ```powershell
 winget install -i --exact --source winget --id Schniz.fnm
 ```
+
+### Interactions
+
+Using `fnm` for `node` and `npm` can cause some issues when the application trying to use `node` or `npm` does not find it in the usual place. The following sections describe workarounds for using various with `fnm`.
+
+#### `husky`
+
+Create a `.huskyrc` file:
+
+- Using `bash`: `touch ~/.huskyrc`
+- Using `PowerShell`: `New-Item -ItemType file ~/.huskyrc`
+
+Add the command `eval "$(fnm env --use-on-cd)"` to the file.
+
+Alternatively, create a sumbolic link to the `.husky` file in this repo using:
+
+```powershell
+New-Item -ItemType SymbolicLink -Path "~/.huskyrc" -Target "C:\Projects\Settings\fnm\.husky"
+```
+
+##### Additional info
+
+https://github.com/Schniz/fnm/issues/668#issuecomment-1483917214
+
+https://github.com/microsoft/vscode/issues/130100#issuecomment-1046181065
+
+https://typicode.github.io/husky/troubleshooting.html#command-not-found
+
+https://github.com/Schniz/fnm/tree/5e075f05d4920b4afe35edec448765d1fa02dc32#bash
