@@ -1,3 +1,30 @@
+# PowerShell
+
+### Installation
+
+Installing using Winget
+
+```
+winget install -i --exact --source winget --id Microsoft.PowerShell
+```
+
+### Set up synchronized settings
+
+According to the [documentation](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.4), the profile settings for the current user can be found at `$HOME\Documents\PowerShell`
+
+- Open PowerShell as Administrator.
+- Delete existing profile file (skip this step if there is no existing profile file):
+
+``` powershell
+Remove-Item -Path $HOME\Documents\PowerShell -Force -Recurse
+```
+
+- Create symlink to synchronized directory:
+
+``` powershell
+New-Item -ItemType SymbolicLink -Path "$HOME\Documents\PowerShell" -Target "C:\Projects\Settings\PowerShell"
+```
+
 # Windows-Terminal-Settings
 
 ## Prerequisites
