@@ -10,3 +10,11 @@ function ReloadPathEnvironmentVariables {
     $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User");
 }
 New-Alias -Name reload -Value ReloadPathEnvironmentVariables
+
+# https://superuser.com/questions/675837/equivalent-of-cmds-where-in-powershell
+function WhereAll {
+    Get-Command -All $args
+}
+
+Remove-Item alias:\where -Force
+Set-Alias where WhereAll
