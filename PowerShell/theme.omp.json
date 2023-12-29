@@ -1,0 +1,84 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#ffffff",
+          "properties": {
+            "time_format": "15:04:05"
+          },
+          "style": "plain",
+          "template": "{{ .CurrentDate | date .Format }}",
+          "type": "time"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": " | ",
+          "type": "text"
+        },
+        {
+          "foreground": "#757575",
+          "style": "plain",
+          "template": "{{if .Root}}<red>\uf0e7</> {{end}}{{ .UserName }}",
+          "type": "session"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": " | ",
+          "type": "text"
+        },
+        {
+          "foreground": "#ffffff",
+          "properties": {
+            "folder_separator_icon": "<#c0c0c0>/</>",
+            "hide_root_location": true,
+            "style": "full",
+            "mapped_locations": {
+              "C:\\repos": "repos"
+            }
+          },
+          "style": "plain",
+          "template": "{{ .Path }}",
+          "type": "path"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": " | ",
+          "type": "text"
+        },
+        {
+          "foreground": "#1f89bb",
+          "style": "plain",
+          "template": "{{ .HEAD }}",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#ffffff",
+          "foreground_templates": ["{{ if gt .Code 0 }}#ff0000{{ end }}"],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "\u276f ",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "console_title_template": "{{if .Root}} \u26a1 {{end}}{{.UserName}} \u2794 📁{{.Folder}}",
+  "final_space": true,
+  "version": 2
+}

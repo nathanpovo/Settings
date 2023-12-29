@@ -1,6 +1,6 @@
 Set-PSReadLineOption -PredictionViewStyle ListView
 
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/capr4n.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$HOME\Documents\PowerShell\theme.omp.json" | Invoke-Expression
 
 fnm env --use-on-cd | Out-String | Invoke-Expression
 
