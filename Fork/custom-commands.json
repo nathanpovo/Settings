@@ -1,0 +1,154 @@
+[
+  {
+    "version" : 1
+  },
+  {
+    "action" : {
+      "args" : "checkout -m ${sha:abbr} -- ${file}",
+      "path" : "$git",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : true
+    },
+    "name" : "Checkout file",
+    "target" : "file"
+  },
+  {
+    "action" : {
+      "args" : "-c 'echo ${sha:abbr} | clip'",
+      "path" : "$sh",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : false
+    },
+    "name" : "Copy Commit Abbreviated SHA",
+    "target" : "revision"
+  },
+  {
+    "action" : {
+      "args" : "merge ${sha:abbr}",
+      "path" : "$git",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : false
+    },
+    "name" : "Merge Commit Into Current Branch",
+    "target" : "revision"
+  },
+  {
+    "action" : {
+      "script" : "wt -d \"${file}\"",
+      "showOutput" : false,
+      "type" : "sh",
+      "waitForExit" : false
+    },
+    "name" : "Open in Terminal",
+    "target" : "file"
+  },
+  {
+    "action" : {
+      "script" : "code \"${file}\"",
+      "showOutput" : false,
+      "type" : "sh",
+      "waitForExit" : false
+    },
+    "name" : "Open in VS Code",
+    "target" : "file"
+  },
+  {
+    "action" : {
+      "args" : "${repo:path} --disable-extensions",
+      "path" : "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : false
+    },
+    "name" : "Open in VS Code - lightweight",
+    "target" : "repository"
+  },
+  {
+    "action" : {
+      "script" : "code \"${file}\" --disable-extensions",
+      "showOutput" : false,
+      "type" : "sh",
+      "waitForExit" : false
+    },
+    "name" : "Open in VS Code - lightweight",
+    "target" : "file"
+  },
+  {
+    "action" : {
+      "args" : "rebase --rebase-merges ${sha}",
+      "path" : "$git",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : true
+    },
+    "name" : "Rebase (Rebase Merges) to Here...",
+    "target" : "revision"
+  },
+  {
+    "action" : {
+      "args" : "rebase --interactive --autostash ${sha}",
+      "path" : "$git",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : true
+    },
+    "name" : "Rebase Interactively (Auto Stash) to Here...",
+    "target" : "revision"
+  },
+  {
+    "action" : {
+      "args" : "rebase --interactive --rebase-merges ${sha}",
+      "path" : "$git",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : true
+    },
+    "name" : "Rebase Interactively (Rebase Merges) to Here...",
+    "target" : "revision"
+  },
+  {
+    "action" : {
+      "args" : "rebase --interactive --update-refs ${sha:abbr}",
+      "path" : "$git",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : true
+    },
+    "name" : "Rebase Interactively (Updated refs) to Here...",
+    "target" : "revision"
+  },
+  {
+    "action" : {
+      "args" : "restore -s ${sha} .",
+      "path" : "${git}",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : true
+    },
+    "name" : "Restore files to commit",
+    "target" : "revision"
+  },
+  {
+    "action" : {
+      "script" : "git diff ${sha}^ ${sha} -- ${file} | git apply --3way",
+      "showOutput" : false,
+      "type" : "sh",
+      "waitForExit" : true
+    },
+    "name" : "Apply Diff from Commit",
+    "target" : "file"
+  },
+  {
+    "action" : {
+      "script" : "git diff ${sha} ${sha}^ -- ${file} | git apply --3way",
+      "showOutput" : false,
+      "type" : "sh",
+      "waitForExit" : true
+    },
+    "name" : "Apply Diff from Commit - Inverse",
+    "target" : "file"
+  }
+]
