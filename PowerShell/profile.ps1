@@ -1,5 +1,8 @@
 Set-PSReadLineOption -PredictionViewStyle ListView
 
+# https://stackoverflow.com/questions/8264655/how-to-make-powershell-tab-completion-work-like-bash/37715242#37715242
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
 oh-my-posh init pwsh --config "$HOME\Documents\PowerShell\theme.omp.json" | Invoke-Expression
 
 fnm env --use-on-cd | Out-String | Invoke-Expression
