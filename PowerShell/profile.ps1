@@ -21,3 +21,5 @@ function WhereAll {
 
 Remove-Item alias:\where -Force
 Set-Alias where WhereAll
+
+. "$HOME\Documents\PowerShell\Completions\fnm.ps1"
