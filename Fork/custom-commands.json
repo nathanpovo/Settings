@@ -37,9 +37,10 @@
   },
   {
     "action" : {
-      "script" : "wt -d \"${file}\"",
+      "args" : "-d \"${file}\"",
+      "path" : "%LOCALAPPDATA%\\Microsoft\\WindowsApps\\wt.exe",
       "showOutput" : false,
-      "type" : "sh",
+      "type" : "process",
       "waitForExit" : false
     },
     "name" : "Open in Terminal",
@@ -47,9 +48,10 @@
   },
   {
     "action" : {
-      "script" : "code \"${file}\"",
+      "args" : "\"${file}\"",
+      "path" : "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
       "showOutput" : false,
-      "type" : "sh",
+      "type" : "process",
       "waitForExit" : false
     },
     "name" : "Open in VS Code",
