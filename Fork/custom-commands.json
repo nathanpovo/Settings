@@ -4,6 +4,26 @@
   },
   {
     "action" : {
+      "script" : "git diff ${sha}^ ${sha} -- ${file} | git apply --3way",
+      "showOutput" : false,
+      "type" : "sh",
+      "waitForExit" : true
+    },
+    "name" : "Apply Diff from Commit",
+    "target" : "file"
+  },
+  {
+    "action" : {
+      "script" : "git diff ${sha} ${sha}^ -- ${file} | git apply --3way",
+      "showOutput" : false,
+      "type" : "sh",
+      "waitForExit" : true
+    },
+    "name" : "Apply Diff from Commit - Inverse",
+    "target" : "file"
+  },
+  {
+    "action" : {
       "args" : "checkout -m ${sha:abbr} -- ${file}",
       "path" : "$git",
       "showOutput" : false,
@@ -132,25 +152,5 @@
     },
     "name" : "Restore files to commit",
     "target" : "revision"
-  },
-  {
-    "action" : {
-      "script" : "git diff ${sha}^ ${sha} -- ${file} | git apply --3way",
-      "showOutput" : false,
-      "type" : "sh",
-      "waitForExit" : true
-    },
-    "name" : "Apply Diff from Commit",
-    "target" : "file"
-  },
-  {
-    "action" : {
-      "script" : "git diff ${sha} ${sha}^ -- ${file} | git apply --3way",
-      "showOutput" : false,
-      "type" : "sh",
-      "waitForExit" : true
-    },
-    "name" : "Apply Diff from Commit - Inverse",
-    "target" : "file"
   }
 ]
