@@ -12,6 +12,7 @@ winget install -i --exact --source winget --id Schniz.fnm
 winget install -i --exact --source winget --id Microsoft.NuGet
 winget install -i --exact --source winget --id Microsoft.DotNet.SDK.8
 winget install -i --exact --source winget --id Microsoft.DotNet.SDK.3_1
+winget install -i --exact --source winget --id JetBrains.Toolbox
 winget install -i --exact --source winget --id 7zip.7zip
 winget install -i --exact --source winget --id ShareX.ShareX
 winget install -i --exact --source winget --id Mozilla.Firefox.DeveloperEdition
