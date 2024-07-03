@@ -7,6 +7,7 @@ Add-AppxPackage -Path "https://github.com/microsoft/winget-cli/releases/latest/d
 winget install -i --exact --source winget --id Microsoft.PowerShell
 winget install -i --exact --source winget --id JanDeDobbeleer.OhMyPosh
 winget install -i --exact --source winget --id Git.Git
+winget install -i --exact --source winget --id Fork.Fork
 winget install -i --exact --source winget --id Schniz.fnm
 winget install -i --exact --source winget --id Microsoft.NuGet
 winget install -i --exact --source winget --id Microsoft.DotNet.SDK.8
