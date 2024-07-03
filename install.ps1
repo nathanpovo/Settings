@@ -1,3 +1,9 @@
+# Update winget to the latest version
+# Taken from
+# https://github.com/at-wr/blog/discussions/3#discussioncomment-9820754
+# https://github.com/microsoft/winget-cli/discussions/4100
+Add-AppxPackage -Path "https://github.com/microsoft/winget-cli/releases/latest/download/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -ForceApplicationShutdown
+
 winget install -i --exact --source winget --id Microsoft.PowerShell
 winget install -i --exact --source winget --id JanDeDobbeleer.OhMyPosh
 winget install -i --exact --source winget --id Git.Git
