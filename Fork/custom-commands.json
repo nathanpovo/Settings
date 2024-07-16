@@ -4,7 +4,7 @@
   },
   {
     "action" : {
-      "script" : "git diff ${sha}^ ${sha} -- ${file} | git apply --3way",
+      "script" : "git diff ${sha}^ ${sha} -- \"${file}\" | git apply --3way",
       "showOutput" : false,
       "type" : "sh",
       "waitForExit" : true
@@ -14,7 +14,7 @@
   },
   {
     "action" : {
-      "script" : "git diff ${sha} ${sha}^ -- ${file} | git apply --3way",
+      "script" : "git diff ${sha} ${sha}^ -- \"${file}\" | git apply --3way",
       "showOutput" : false,
       "type" : "sh",
       "waitForExit" : true
@@ -24,7 +24,7 @@
   },
   {
     "action" : {
-      "args" : "checkout -m ${sha:abbr} -- ${file}",
+      "args" : "checkout -m ${sha:abbr} -- \"${file}\"",
       "path" : "$git",
       "showOutput" : false,
       "type" : "process",
