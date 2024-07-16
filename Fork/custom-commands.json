@@ -152,5 +152,16 @@
     },
     "name" : "Restore files to commit",
     "target" : "revision"
+  },
+  {
+    "action" : {
+      "args" : "restore -s ${sha} -- \"${file}\"",
+      "path" : "${git}",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : true
+    },
+    "name" : "Restore files to commit",
+    "target" : "file"
   }
 ]
