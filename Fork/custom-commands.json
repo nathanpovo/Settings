@@ -90,9 +90,10 @@
   },
   {
     "action" : {
-      "script" : "code \"${file}\" --disable-extensions",
+      "args" : "\"${file}\" --disable-extensions --new-window",
+      "path" : "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
       "showOutput" : false,
-      "type" : "sh",
+      "type" : "process",
       "waitForExit" : false
     },
     "name" : "Open in VS Code - lightweight",
