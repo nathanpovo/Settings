@@ -112,6 +112,17 @@
   },
   {
     "action" : {
+      "args" : "rebase --update-refs ${sha}",
+      "path" : "$git",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : true
+    },
+    "name" : "Rebase (Updated refs) to Here...",
+    "target" : "revision"
+  },
+  {
+    "action" : {
       "args" : "rebase --interactive --autostash ${sha}",
       "path" : "$git",
       "showOutput" : false,
