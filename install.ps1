@@ -18,3 +18,4 @@ winget install -i --exact --source winget --id ShareX.ShareX
 winget install -i --exact --source winget --id Mozilla.Firefox.DeveloperEdition
 winget install -i --exact --source winget --id Nilesoft.Shell
 winget install -i --exact --source winget --id Docker.DockerDesktop
+winget install -i --exact --source winget --id Microsoft.AzureCLI
