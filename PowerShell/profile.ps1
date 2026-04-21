@@ -5,7 +5,7 @@ Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 oh-my-posh init pwsh --config "$HOME\Documents\PowerShell\theme.omp.json" | Invoke-Expression
 
-fnm env --use-on-cd | Out-String | Invoke-Expression
+fnm env --use-on-cd --version-file-strategy recursive | Out-String | Invoke-Expression
 
 # https://stackoverflow.com/questions/17794507/reload-the-path-in-powershell
 function ReloadPathEnvironmentVariables {
