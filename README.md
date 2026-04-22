@@ -69,6 +69,25 @@ https://github.com/microsoft/terminal/issues/1918
 https://github.com/TheFern2/windows-terminal-icons
 https://github.com/microsoft/terminal/tree/main/src/cascadia/CascadiaPackage/ProfileIcons
 
+# Fork
+
+### Set up synchronized settings
+
+On Windows, the path to where Fork stores the custom commands is `%localappdata%\Fork\custom-commands.json`.
+
+- Open PowerShell as Administrator.
+- Delete the existing custom commands file (skip this step if there is no file):
+
+``` powershell
+Remove-Item -Path $env:LOCALAPPDATA\Fork\custom-commands.json -Force
+```
+
+- Create symlink to synchronized directory:
+
+``` powershell
+New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\Fork\custom-commands.json -Target "C:\Projects\Settings\Fork\custom-commands.json"
+```
+
 # fnm
 
 Source - https://github.com/Schniz/fnm
