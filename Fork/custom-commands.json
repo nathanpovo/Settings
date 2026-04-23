@@ -225,5 +225,15 @@
     },
     "name" : "Restore files to commit",
     "target" : "file"
+  },
+  {
+    "action" : {
+      "script" : "git --no-pager log --all --first-parent --author-date-order --format=%S -- '${file}'",
+      "showOutput" : true,
+      "type" : "sh",
+      "waitForExit" : true
+    },
+    "name" : "Show branches that modified file",
+    "target" : "file"
   }
 ]
