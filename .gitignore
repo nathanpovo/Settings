@@ -1,0 +1,7 @@
+# Fork
+## The entire localappdata directory of Fork is in the repo so all files must be
+## ignored by default.
+Fork/*
+
+## Allow the file used for custom commands
+!Fork/custom-commands.json

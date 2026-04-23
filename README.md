@@ -75,17 +75,19 @@ https://github.com/microsoft/terminal/tree/main/src/cascadia/CascadiaPackage/Pro
 
 On Windows, the path to where Fork stores the custom commands is `%localappdata%\Fork\custom-commands.json`.
 
+Note that Fork deletes and re-creates the `custom-commands.json` file whenever a change is done to a a custom command in Fork so a symlink directly to the file will not work for long as it will eventually be deleted. Instead, the entire directory can be symlinked. The `.gitignore` file in this repository will ignore all files other than `custom-commands.json` to prevent any unnecessary files from being committed to the repository.
+
 - Open PowerShell as Administrator.
-- Delete the existing custom commands file (skip this step if there is no file):
+- Move the existing Fork localappdata directory:
 
 ``` powershell
-Remove-Item -Path $env:LOCALAPPDATA\Fork\custom-commands.json -Force
+Move-Item $env:LOCALAPPDATA\Fork "C:\Projects\Settings\Fork"
 ```
 
 - Create symlink to synchronized directory:
 
 ``` powershell
-New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\Fork\custom-commands.json -Target "C:\Projects\Settings\Fork\custom-commands.json"
+New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\Fork -Target "C:\Projects\Settings\Fork"
 ```
 
 # fnm
