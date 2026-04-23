@@ -79,17 +79,6 @@
   },
   {
     "action" : {
-      "args" : "${repo:path} --disable-extensions",
-      "path" : "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
-      "showOutput" : false,
-      "type" : "process",
-      "waitForExit" : false
-    },
-    "name" : "Open in VS Code - lightweight",
-    "target" : "repository"
-  },
-  {
-    "action" : {
       "args" : "\"${file}\" --disable-extensions --new-window",
       "path" : "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
       "showOutput" : false,
@@ -98,6 +87,17 @@
     },
     "name" : "Open in VS Code - lightweight",
     "target" : "file"
+  },
+  {
+    "action" : {
+      "args" : "${repo:path} --disable-extensions",
+      "path" : "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
+      "showOutput" : false,
+      "type" : "process",
+      "waitForExit" : false
+    },
+    "name" : "Open in VS Code - lightweight",
+    "target" : "repository"
   },
   {
     "action" : {
