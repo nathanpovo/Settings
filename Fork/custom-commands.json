@@ -23,6 +23,56 @@
     "target" : "file"
   },
   {
+    "name" : "Apply patch (three-way merge)",
+    "target" : "repository",
+    "ui" : {
+      "buttons" : [
+        {
+          "action" : {
+            "args" : "am -3 $1{path} $2{value} $3{value}",
+            "path" : "${git}",
+            "showOutput" : true,
+            "type" : "process",
+            "waitForExit" : true
+          },
+          "title" : "OK"
+        },
+        {
+          "action" : {
+            "type" : "cancel"
+          },
+          "title" : "Cancel"
+        }
+      ],
+      "controls" : [
+        {
+          "defaultDirectory" : "",
+          "dialogType" : "openFile",
+          "filename" : "",
+          "textBoxType" : "filepath",
+          "title" : "Path Text Box",
+          "type" : "textBox"
+        },
+        {
+          "checkedValue" : "--ignore-whitespace",
+          "defaultValue" : true,
+          "title" : "Ignore whitespace",
+          "type" : "checkBox",
+          "uncheckedValue" : ""
+        },
+        {
+          "checkedValue" : "--ignore-space-change",
+          "defaultValue" : true,
+          "title" : "Ignore space change",
+          "type" : "checkBox",
+          "uncheckedValue" : ""
+        }
+      ],
+      "description" : "Are you sure you want to execute custom command?",
+      "title" : "Apply patch (three-way merge)"
+    }
+  },
+  {
     "action" : {
       "args" : "checkout -m ${sha:abbr} -- \"${file}\"",
       "path" : "$git",
